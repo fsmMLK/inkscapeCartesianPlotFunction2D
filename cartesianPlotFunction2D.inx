@@ -49,7 +49,11 @@
         </page>
         <page name="Help" _gui-text="Help">
             <_param name="instructions" type="description" xml:space="preserve">
- Help here.
+              You must write python compatible expressions. The methods of 'math' module are available.
+              
+              Please keep in mind that the operator os power in python is **.
+              
+              Ex: for f(x) = x squared, you must type x**2
 </_param>
         </page>
     </param>

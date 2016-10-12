@@ -63,7 +63,7 @@ Here you can define your function and set both the input and output ranges.
 
 **Use ellipsis marks at the ends:** Use ellipsis marks at the end of the plots to indicate continuation
 
-<img src="docs/images/ellipsis.png" width="600px"/>
+<img src="docs/images/ellipsis.png" width="400px"/>
 
 **Draw Cartesian plane:** Toggle to generate the axes grid. Usually you want this to be checked. =)
 
@@ -81,14 +81,16 @@ Here you can define your function and set both the input and output ranges.
     * if xMin<=0.0 then the lower limit xMin will be set to 0.001.
     * if xMax<=0.0 then the upper limit xMax will be set to 100 times xMin.
 
-<img src="docs/images/xMin_xMax.png" width="600px"/>
+<img src="docs/images/xMin_xMax.png" width="500px"/>
 
 **Y min and max:** (linear scale only) Set the limits of the Y axis. The extension will inform if these limits are invalid. These values are used to limit the solution, that is, if `f(x)` does not lie within Ymin and Ymax, then the solution will be clipped at these values.
 
 <img src="docs/images/yMin_yMax.png" width="600px"/>
 
 
-**multiply X by pi:** Multiply the limits by pi. Ex: `xMin=-2` ans `xMax=2`, with this checkbox selected results in x limits of `xMin=-2pi` ans `xMax=2pi`. This is specially useful for trigonometric functions. If this checkbox is selected, *X tick step* (see below) will be also multiplied  by pi.
+**multiply X by pi:** Multiply the limits by pi. Ex: `xMin=-2` ans `xMax=2`, with this checkbox selected results in x limits of `xMin=-2pi` ans `xMax=2pi`. This is specially useful for trigonometric functions.
+
+>  If this checkbox is selected, *X tick step* (see below) will be also multiplied  by pi.
 
 <img src="docs/images/multiply_X_ByPi.png" width="600px"/>
 
