@@ -63,7 +63,7 @@ Here you can define your function and set both the input and output ranges.
 
 **Use ellipsis marks at the ends:** Use ellipsis marks at the end of the plots to indicate continuation
 
-<img src="docs/images/ellipsis.png" width="400px"/>
+<img src="docs/images/ellipsis.png" width="300px"/>
 
 **Draw Cartesian plane:** Toggle to generate the axes grid. Usually you want this to be checked. =)
 
