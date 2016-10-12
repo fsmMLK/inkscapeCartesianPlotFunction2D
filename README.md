@@ -168,6 +168,8 @@ Calling: `squareWave(x,amplitude=1.0,offset=0,period=1.0,delay=0.0)`
 <img src="docs/images/squareWave.png" width="700px"/>
 
 > Tip: You can define your own functions at the beginning of the file `cartesianPlotFunction2D.py`
+
+
 # Examples
 
 <img src="docs/images/Examples.png" width="900px"/>
