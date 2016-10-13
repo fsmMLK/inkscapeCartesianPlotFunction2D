@@ -49,11 +49,16 @@
         </page>
         <page name="Help" _gui-text="Help">
             <_param name="instructions" type="description" xml:space="preserve">
-              You must write python compatible expressions. The methods of 'math' module are available.
               
-              Please keep in mind that the operator os power in python is **.
+You can add LaTeX expressions as labels. If you need to use mathematical environment, encloses the text with $...$.
+ 
+The argument 'X or Y tick sufix value' must be compatible with mathematical environemnts. You don't need to use $...$
+ 
+You must write python compatible expressions. The methods of 'math' module are available.
               
-              Ex: for f(x) = x squared, you must type x**2
+Please keep in mind that the operator 'power' in python is **.
+              
+Ex: for f(x) = x squared, you must type x**2
 </_param>
         </page>
     </param>
