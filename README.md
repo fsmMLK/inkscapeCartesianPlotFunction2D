@@ -37,6 +37,18 @@ inkscape/extensions/
             `-- cartesianPlotFunction2D.inx
 ```
 
+**Disabling LaTeX support of inkscapeMadeEasy**
+
+Many of the methods implemented in inkscapeMadeEasy project use LaTeX to generate text. To this end I decided to employ the excellent extension **textext** from Pauli Virtanen  <https://pav.iki.fi/software/textext/>. 
+
+LaTeX support via textext extension requires LaTeX typesetting system in your computer (it's free and awesome! =] ), together with a few python modules (pygtk and Tkinter among others). The later might be a problem for non-Linux systems (precompiled inkscape for Windows as OS X don't come with them).
+
+Since many people don't use LaTeX and/or don't have it installed, inkscapeMadeEasy's LaTeX support is now optional. **By default, LaTeX support is ENABLED.**
+
+Please refer to <https://fsmmlk.github.io/inkscapeMadeEasy/#installation-and-requirements> on how to easily disable LaTeX support.
+
+.. warning:: Since disabling LaTeX support is a new feature, this project was not yet extensively checked for misplacements/errors when this support is disabled. Please report any issues you find.
+
 # Usage
 
 This extension is presented in two tabs, **Function Definition** and  **Axes configuration**. The first is used to define the function and input/output ranges. The second is used to configure the axes.
