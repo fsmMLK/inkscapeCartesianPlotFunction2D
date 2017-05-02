@@ -21,6 +21,7 @@
 #
 # --------------------------------------------------------------------------------------
 
+from __future__ import division
 import inkex
 import inkscapeMadeEasy_Base as inkBase
 import inkscapeMadeEasy_Draw as inkDraw
