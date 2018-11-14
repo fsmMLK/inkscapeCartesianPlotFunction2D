@@ -51,6 +51,8 @@ Please refer to <https://fsmmlk.github.io/inkscapeMadeEasy/#installation-and-req
 
 # Usage
 
+The extension can be found under `extensions > fsmMLK > Plot 2D > Cartesian` menu.
+
 This extension is presented in two tabs, **Function Definition** and  **Axes configuration**. The first is used to define the function and input/output ranges. The second is used to configure the axes.
 
 <img src="docs/images/Config_Function.png" width="600px"/>
