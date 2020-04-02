@@ -37,6 +37,8 @@ inkscape/extensions/
             `-- cartesianPlotFunction2D.inx
 ```
 
+For LaTeX support on Ubuntu-18.04, try `sudo apt-get install texlive-science texlive-pictures texlive-fonts-recommended`
+
 **Disabling LaTeX support of inkscapeMadeEasy**
 
 Many of the methods implemented in inkscapeMadeEasy project use LaTeX to generate text. To this end I decided to employ the excellent extension **textext** from Pauli Virtanen  <https://pav.iki.fi/software/textext/>. 
