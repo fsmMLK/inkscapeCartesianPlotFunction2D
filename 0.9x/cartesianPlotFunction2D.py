@@ -161,7 +161,7 @@ class PlotFunction(inkBase.inkscapeMadeEasy):
         lineWidthPlot = so.generalAspectFactor * min(so.xScale, so.yScale) / 30.0
         lineColor = inkDraw.color.defined('blue')
         if so.useEllipsis:
-            StartLineInf, EndLineInf = inkDraw.marker.createInfLineMarker(self, 'InfiniteLine', RenameMode=1, fillColor=lineColor)
+            StartLineInf, EndLineInf = inkDraw.marker.createElipsisMarker(self, 'InfiniteLine', RenameMode=1, fillColor=lineColor)
             lineStylePlot = inkDraw.lineStyle.set(lineWidth=lineWidthPlot, lineColor=lineColor, markerStart=StartLineInf, markerEnd=EndLineInf)
         else:
             lineStylePlot = inkDraw.lineStyle.set(lineWidth=lineWidthPlot, lineColor=lineColor)
