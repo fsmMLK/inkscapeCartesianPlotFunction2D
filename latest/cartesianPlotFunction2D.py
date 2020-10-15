@@ -22,13 +22,16 @@
 # --------------------------------------------------------------------------------------
 
 from __future__ import division
-import inkex
+
+import random
+from math import *
+
+import numpy
+
 import inkscapeMadeEasy.inkscapeMadeEasy_Base as inkBase
 import inkscapeMadeEasy.inkscapeMadeEasy_Draw as inkDraw
 import inkscapeMadeEasy.inkscapeMadeEasy_Plot as inkPlot
-from math import *
-import numpy
-import random
+
 
 # heaviside function
 def u(x):
@@ -52,7 +55,7 @@ def rand():
     return random.random()
 
 
-#---------------------------------------------
+# ---------------------------------------------
 class PlotFunction(inkBase.inkscapeMadeEasy):
 
     def __init__(self):
@@ -98,9 +101,9 @@ class PlotFunction(inkBase.inkscapeMadeEasy):
         position[0] = int(ceil(position[0] / 10.0)) * 10
         position[1] = int(ceil(position[1] / 10.0)) * 10
 
-        #root_layer = self.current_layer
+        # root_layer = self.current_layer
         root_layer = self.document.getroot()
-        #root_layer = self.getcurrentLayer()
+        # root_layer = self.getcurrentLayer()
 
         myLambda = eval('lambda x: ' + so.function)
 
@@ -125,14 +128,15 @@ class PlotFunction(inkBase.inkscapeMadeEasy):
             xData = [x * pi for x in xData]
 
         # generate y data
-        #yData= map(myLambda, xData)
+        # yData= map(myLambda, xData)
 
         yData = []
         for x in xData:
             if myLambda(x) == float('Inf'):
                 yData.append(0.0)
                 inkDraw.text.write(self, 'Inf result detected: The function at x=%d is infinite.' % x, position, root_layer, fontSize=5)
-                inkDraw.text.write(self, 'Setting the point to 0... PLEASE CHECK YOUR PLOT!' % x, [position[0], position[1] + 8], root_layer, fontSize=5)
+                inkDraw.text.write(self, 'Setting the point to 0... PLEASE CHECK YOUR PLOT!' % x, [position[0], position[1] + 8], root_layer,
+                                   fontSize=5)
             else:
                 yData.append(myLambda(x))
 
@@ -166,12 +170,11 @@ class PlotFunction(inkBase.inkscapeMadeEasy):
         else:
             lineStylePlot = inkDraw.lineStyle.set(lineWidth=lineWidthPlot, lineColor=lineColor)
 
-        inkPlot.plot.cartesian(self, root_layer, xData, yData, position,
-                               xLabel=so.xLabel, yLabel=so.yLabel, xlog10scale=so.xLog10scale, ylog10scale=so.yLog10scale,
-                               xTicks=so.xTicks, yTicks=so.yTicks, xTickStep=so.xTickStep, yTickStep=so.yTickStep,
-                               xScale=so.xScale, yScale=so.yScale, xExtraText=xExtraText, yExtraText=so.yExtraText,
-                               xGrid=so.xGrid, yGrid=so.yGrid, generalAspectFactorAxis=so.generalAspectFactor, lineStylePlot=lineStylePlot,
-                               forceYlim=ylim, drawAxis=so.drawAxis)
+        inkPlot.plot.cartesian(self, root_layer, xData, yData, position, xLabel=so.xLabel, yLabel=so.yLabel, xlog10scale=so.xLog10scale,
+                               ylog10scale=so.yLog10scale, xTicks=so.xTicks, yTicks=so.yTicks, xTickStep=so.xTickStep, yTickStep=so.yTickStep,
+                               xScale=so.xScale, yScale=so.yScale, xExtraText=xExtraText, yExtraText=so.yExtraText, xGrid=so.xGrid, yGrid=so.yGrid,
+                               generalAspectFactorAxis=so.generalAspectFactor, lineStylePlot=lineStylePlot, forceYlim=ylim, drawAxis=so.drawAxis)
+
 
 if __name__ == '__main__':
     plot = PlotFunction()
