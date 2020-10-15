@@ -112,7 +112,7 @@ Installation procedures for latest and older versions are described below.
 
 The extension can be found under `extensions > fsmMLK > Plot 2D > Cartesian` menu.
 
-This extension is presented in two tabs, **Function Definition** and  **Axes configuration**. The first is used to define the function and input/output ranges. The second is used to configure the axes.
+This extension is presented in two tabs, **Function Definition** and  **Config**. The first is used to define the function and input/output ranges. The second is used to configure the axes.
 
 ## Function Definition tab
 
@@ -126,25 +126,12 @@ Here you can define your function and set both the input and output ranges.
 
 > Important: The extension will execute the function as a piece of python code. **DO NOT copy paste functions from untrusted sources!**
 
-### General config section
 
 **Number of points:** Number of points where the function will be evaluated within the limits. See image below.
 
   - *X axis in linear scale*: the points will be uniformly distributed within the limits.
   - *X axis in log scale*: the points will be logarithmically distributed within the limits (same number of points per decade)
 
-
-**Use ellipsis marks at the ends:** Use ellipsis marks at the end of the plots to indicate continuation
-
-<img src="docs/images/ellipsis.png" width="250px"/>
-
-**Draw Cartesian plane:** Toggle to generate the cartesian axes together with the plot.
-
-<img src="docs/images/drawAxes.png" width="550px"/>
-
-**General aspect factor:** General aspect ratio between line widths and text height. I designed this extension to have an overall aspect ratio that "looks nice". It is a function of X and Y tick lengths. With this control you can scale both line width and text height. The defauls value is 1.0.
-
-<img src="docs/images/generalAspectRatio.png" width="600px"/>
 
 
 ### Input/Output range sections
@@ -171,10 +158,32 @@ The extension will inform if these limits are invalid.
 
 **Y limits:** (linear scale only) Set the range of the dependent variable (Y axis). The extension will inform if these limits are invalid. These limits are used to truncate the solution, that is, if `f(x)` does not lie within Ymin and Ymax, the solution will be clipped at these values. See image bellow.
 
-## Axes Configuration tab
+## Config tab
 
-This tab has two sections, one for each axis. They affect the axes the same way.
+This tab has two sections. The first contains general properties of the plot and the second controls the axes.
+
 <img src="docs/images/AxesConfig_Tab.png" width="450px"/>
+
+
+### General config section
+
+**Use ellipsis marks at the ends:** Use ellipsis marks at the end of the plots to indicate continuation
+
+<img src="docs/images/ellipsis.png" width="250px"/>
+
+**Draw Cartesian plane:** Toggle to generate the cartesian axes together with the plot.
+
+<img src="docs/images/drawAxes.png" width="550px"/>
+
+**General aspect factor:** General aspect ratio between line widths and text height. I designed this extension to have an overall aspect ratio that "looks nice". It is a function of X and Y tick lengths. With this control you can scale both line width and text height. The defauls value is 1.0.
+
+<img src="docs/images/generalAspectRatio.png" width="600px"/>
+
+### Axes section
+
+The parameters in this section controls X and Y axes. They act on the axes the same way.
+
+
 
 **Label:** label of the axes. If LaTeX support is activated and you want to write in mathematical environment, enclose your text with $...$.
 

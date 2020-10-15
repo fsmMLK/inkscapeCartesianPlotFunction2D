@@ -10,13 +10,9 @@
         <page name="Cartesian plot" appearance="minimal" gui-text="Function definition">
             <hbox>
                 <vbox>
-                    <param name="function" type="string" appearance="multiline" gui-text="Function (python syntax):">sin(x)</param>
-                    <label> The methods of 'math' module are available.</label>
-                    <label appearance="header">General config</label>
+                    <param name="function" type="string" appearance="multiline" gui-text="Function¹ (python syntax):">sin(x)</param>
+
                     <param name="nPoints" type="int" min="2" max="1000" gui-text="Number of points:">20</param>
-                    <param name="useElipsis" type="bool" gui-text="Use ellipsis marks at the ends">false</param>
-                    <param name="drawAxis" type="bool" gui-text="Draw cartesian plane">true</param>
-                    <param name="generalAspectFactor" type="float" precision="2" min="0.01" max="100" gui-text="General aspect factor (default: 1.0):">1</param>
                     <hbox>
                         <vbox>
                             <label appearance="header">Input range</label>
@@ -35,44 +31,56 @@
                 </vbox>
             </hbox>
             <spacer size="expand"/>
+            <label>¹ The methods of 'math' module are available.</label>
         </page>
-        <page name="Axes configuration" appearance="minimal" gui-text="Axes configuration">
+         <page name="Axes configuration" appearance="minimal" gui-text="Config">
             <hbox>
                 <vbox>
-                    <label appearance="header">X axis</label>
-                    <param name="xLabel" type="string" gui-text="Label:">$x$</param>
-                    <hbox>
-                        <vbox>
-                            <param name="xLog10scale" type="bool" gui-text="Log scale">false</param>
-                            <param name="xGrid" type="bool" gui-text="Add grid">true</param>
-                            <param name="xTicks" type="bool" gui-text="Add ticks">true</param>
-                        </vbox>
-                        <spacer/>
-                        <separator/>
-                        <spacer/>
-                        <vbox>
-                            <param name="xTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
-                            <param name="xScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
-                            <param name="xExtraText" type="string" gui-text="Tick sufix¹:"></param>
-                        </vbox>
-                    </hbox>
-                    <label appearance="header">Y axis</label>
-                    <param name="yLabel" type="string" gui-text="Label:">$y(x)$</param>
-                    <hbox>
-                        <vbox>
-                            <param name="yLog10scale" type="bool" gui-text="Log scale">false</param>
-                            <param name="yGrid" type="bool" gui-text="Add grid">true</param>
-                            <param name="yTicks" type="bool" gui-text="Add ticks">true</param>
-                        </vbox>
-                        <spacer/>
-                        <separator/>
-                        <spacer/>
-                        <vbox>
-                            <param name="yTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
-                            <param name="yScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
-                            <param name="yExtraText" type="string" gui-text="Tick sufix¹:"></param>
-                        </vbox>
-                    </hbox>
+                    <label appearance="header">General config</label>
+                    <param name="useElipsis" type="bool" gui-text="Use ellipsis marks at the ends">false</param>
+                    <param name="drawAxis" type="bool" gui-text="Draw cartesian plane">true</param>
+
+                    <param name="generalAspectFactor" type="float" precision="2" min="0.01" max="100" gui-text="General aspect factor (default: 1.0):">1</param>
+                    <label appearance="header">Axes</label>
+                    <param name="subtab_axis" type="notebook">
+                        <page name="Xaxis" appearance="minimal" gui-text="X axis">
+                            <param name="xLabel" type="string" gui-text="Label:">$x$</param>
+                            <hbox>
+                                <vbox>
+                                    <param name="xLog10scale" type="bool" gui-text="Log scale">false</param>
+                                    <param name="xGrid" type="bool" gui-text="Add grid">true</param>
+                                    <param name="xTicks" type="bool" gui-text="Add ticks">true</param>
+                                </vbox>
+                                <spacer/>
+                                <separator/>
+                                <spacer/>
+                                <vbox>
+                                    <param name="xTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
+                                    <param name="xScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
+                                    <param name="xExtraText" type="string" gui-text="Tick sufix¹:"></param>
+                                </vbox>
+                            </hbox>
+                        </page>
+                        <page name="Yaxis" appearance="minimal" gui-text="Y axis">
+                            <param name="yLabel" type="string" gui-text="Label:">$y(x)$</param>
+                            <hbox>
+                                <vbox>
+                                    <param name="yLog10scale" type="bool" gui-text="Log scale">false</param>
+                                    <param name="yGrid" type="bool" gui-text="Add grid">true</param>
+                                    <param name="yTicks" type="bool" gui-text="Add ticks">true</param>
+                                </vbox>
+                                <spacer/>
+                                <separator/>
+                                <spacer/>
+                                <vbox>
+                                    <param name="yTickStep" type="float" min="0" max="2000" precision="3" gui-text="Tick step²:">1</param>
+                                    <param name="yScale" type="float" min="5" max="2000" precision="1" gui-text="Tick length³:">50</param>
+                                    <param name="yExtraText" type="string" gui-text="Tick sufix¹:"></param>
+
+                                </vbox>
+                            </hbox>
+                        </page>
+                    </param>
                 </vbox>
             </hbox>
             <label>¹ LaTeX: text will be in inline math mode $...$.</label>

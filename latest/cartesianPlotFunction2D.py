@@ -62,6 +62,7 @@ class PlotFunction(inkBase.inkscapeMadeEasy):
         inkBase.inkscapeMadeEasy.__init__(self)
 
         self.arg_parser.add_argument("--tab", type=str, dest="tab", default="object")
+        self.arg_parser.add_argument("--subtab_axis", type=str, dest="subtab_axis", default="object")
 
         self.arg_parser.add_argument("--function", type=str, dest="function", default='pow(x,2)')
         self.arg_parser.add_argument("--nPoints", type=int, dest="nPoints", default=20)
