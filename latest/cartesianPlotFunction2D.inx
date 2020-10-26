@@ -11,20 +11,19 @@
             <hbox>
                 <vbox>
                     <param name="function" type="string" appearance="multiline" gui-text="Function¹ (python syntax):">sin(x)</param>
-
                     <param name="nPoints" type="int" min="2" max="1000" gui-text="Number of points:">20</param>
                     <hbox>
                         <vbox>
                             <label appearance="header">Input range</label>
                             <hbox>
                                 <param name="xMin" type="float" min="-100000" max="100000" precision="3" gui-text="X limits:">0</param>
-                                <param name="xMax" type="float" min="-100000" max="100000" precision="3" gui-text="">6</param>
+                                <param name="xMax" type="float" min="-100000" max="100000" precision="3" gui-text=" ">6</param>
                             </hbox>
                             <param name="xPi" type="bool" gui-text="multiply by π:">false</param>
                             <label appearance="header">Output range (clip solution, linear axis only)</label>
                             <hbox>
                                 <param name="yMin" type="float" min="-100000" precision="3" max="100000" gui-text="Y limits:">-1</param>
-                                <param name="yMax" type="float" min="-100000" precision="3" max="100000" gui-text="">1</param>
+                                <param name="yMax" type="float" min="-100000" precision="3" max="100000" gui-text=" ">1</param>
                             </hbox>
                         </vbox>
                     </hbox>
@@ -39,7 +38,6 @@
                     <label appearance="header">General config</label>
                     <param name="useElipsis" type="bool" gui-text="Use ellipsis marks at the ends">false</param>
                     <param name="drawAxis" type="bool" gui-text="Draw cartesian plane">true</param>
-
                     <param name="generalAspectFactor" type="float" precision="2" min="0.01" max="100" gui-text="General aspect factor (default: 1.0):">1</param>
                     <label appearance="header">Axes</label>
                     <param name="subtab_axis" type="notebook">
