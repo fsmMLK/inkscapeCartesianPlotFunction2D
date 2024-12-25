@@ -45,11 +45,14 @@ def u(x):
 def rectPulse(x, amplitude=1.0, length=1.0, offset=0.0, delay=0.0):
     return amplitude * (u(x - delay) - u(x - length - delay)) + offset
 
-
 # square wave, with amplitude -A/2 to A/2, and given period
 def squareWave(x, amplitude=1.0, offset=0, period=1.0, delay=0.0):
     return rectPulse((x % period), amplitude, period / 2.0, offset=-amplitude / 2.0 + offset, delay=delay)
 
+# PWM wave
+def pwm(x,amplitude=1.0, offset=0.0, period=1.0, duty=0.5,delay=0.0):
+    #duty: percentage between 0.0 and 1.0
+    return rectPulse((x % period), amplitude, period * duty, offset=offset, delay=delay)
 
 def rand():
     return random.random()

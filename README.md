@@ -237,7 +237,7 @@ Ex: limits from -1 to 1, with tick step of 0.5 will produce ticks at -1, -0.5, 0
 
 # Special functions
 
-Together with the extension, I also predefined 3 new functions:
+Together with the extension, I also predefined a few functions:
 
  - **Heaviside step function**
 
@@ -245,19 +245,27 @@ Calling: `u(x)`
 
 Examples:
 
-<img src="docs/images/heaviside.png" width="800px"/>
+<img src="docs/images/heaviside.png" width="900px"/>
 
  - **Rectangular pulse**
 
 Calling: `rectPulse(x,amplitude=1.0,length=1.0,offset=0.0,delay=0.0)`
 
-<img src="docs/images/rectPulse.png" width="800px"/>
+<img src="docs/images/rectPulse.png" width="900px"/>
 
  - **Square wave**
 
 Calling: `squareWave(x,amplitude=1.0,offset=0,period=1.0,delay=0.0)`
 
-<img src="docs/images/squareWave.png" width="700px"/>
+<img src="docs/images/squareWave.png" width="800px"/>
+
+
+ - **PWM (Pulse Width Modulation)**
+
+Calling: `pwm(x,amplitude=1.0, offset=0.0, period=1.0, duty=0.5,delay=0.0):`
+
+<img src="docs/images/pwm.png" width="400px"/>
+
 
 > Tip: You can define your own functions at the beginning of the file `cartesianPlotFunction2D.py`
 
